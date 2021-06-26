@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+    {% block contenido%}
+    {% load static %}
+    <div class="container">
+        <form method="POST" class="post-form" action="http://127.0.0.1:8000/actualizar/{{ usuario.id }}">
+            {% csrf_token %}
+            <br>
+
+                    <h4>Actualizar Usuarios</h4>
+
+                <div class="uno">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required maxlength="50" value="{{ usuario.nombre }}">
+                </div>
+                <div class="uno">
+                    <label>Apellidos</label>
+                    <input type="text" name="apellidos" required maxlength="50" value="{{ usuario.apellidos }}">
+                </div>
+                <div class="uno">
+                    <label>Email:</label>
+                    <input type="email" name="email" required maxlength="50" value="{{ usuario.email }}">
+                </div>
+                <div class="uno">
+                    <label>clave:</label>
+                    <input type="password" name="clave" required maxlength="50" value="{{ usuario.clave }}">
+                </div>
+
+
+
+                <div class="uno">
+                <label>Estado:</label>
+                <select class="form-select" aria-label="Default select example" name="estado">
+                    <option selected>seleccione un estado</option>
+                    {% for e in estado %}
+                        <option value={{ e.id }}>{{ e.tipo_estado }}</option>
+                    {% endfor %}
+                </select>
+                </div>
+
+                    <div class="uno">
+                    <label>rol:</label>
+                    <select class="form-select" aria-label="Default select example" name="rol">
+                    <option selected>Seleccione un rol</option>
+                    {% for r in rol %}
+                        <option value={{ r.id }}>{{ r.nombre_rol }}</option>
+                    {% endfor %}
+                </select>
+                    </div>
+
+
+
+
+            <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>
+
+    </form>
+    </div>
+
+        <link rel="stylesheet" type="text/css" href='{% static "css/form.css" %}'/>
+    {% endblock %}
+    </body>
+    </html>

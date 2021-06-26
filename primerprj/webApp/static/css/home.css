@@ -1,0 +1,139 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color:rgb(174, 188, 206);
+}
+
+header{
+
+    display: flex;
+    background-color: #446996;
+    flex-direction: row;
+    flex-basis: 100%;
+    height: 100px;
+max-width: 1500px;
+}
+.img-logo{
+
+    height: 100px;
+    margin-right: 7em;
+}
+.buscar{
+    margin-top: 3em;
+    margin-right: 1em;
+    height: 40px;
+    width:350px;
+    border-radius: 10px;
+    margin-left: 8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.icon{
+margin-top: 3em;
+    margin-left: 2em;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+
+    display: flex;
+    flex-direction: row;
+    width:300px;
+    margin-left: 7em;
+
+}
+.home{
+    width: 100px;
+    height: 40px;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3em;
+
+}
+.home,img{
+    height: 30px;
+}
+.home,a{
+font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+
+
+}
+
+#cerrar{
+
+    width: 100px;
+    margin-right: 1em;
+    color: white;
+    height: 40px;
+    /*background-color: #aaaaaa;*/
+    margin-top: 2.5em;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.play{
+    background-color: black;
+    width: 40px;
+    height: 39px;
+    border-radius: 5px;
+    margin-left: 5px;
+
+}
+.foto{
+    background-color: #e8e0e0;
+    width: 50px;
+    height: 50px;
+    border-radius: 90%;
+    margin-bottom: 2em;
+    margin-right: 5px;
+
+}
+.contenedor{
+    background-color: #ffffff;
+    max-width:650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 1em;
+
+}
+.perfil{
+    /*background-color: aqua;*/
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    padding: 1em;
+
+}
+.contenido{
+    /*background-color: #3c5c91;*/
+    display: flex;
+    flex-direction: row;
+}
+.contenido, input{
+    /*background-color: #ff253a;*/
+    width: 640px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 5%;
+
+}
+
+.componente{
+    /*background-color: #3edbf0;*/
+    max-width: 700px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5%;
+}

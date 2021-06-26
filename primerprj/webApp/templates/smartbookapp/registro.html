@@ -1,0 +1,54 @@
+{% extends "smartbookapp/plantillaPadre.html" %}
+{% block titulo %}
+
+{% endblock%}
+
+{% block contenido %}
+{% load static %}
+    <form class="formulario"  method="post">
+        {% csrf_token %}
+         <a class="link"><img src='{% static "img/logo2.png"%}'/></a>
+        <h1>Registrate</h1>
+        <div class="contenedor">
+
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Nombre " name="nombre">
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Apellido" name="apellidos">
+            </div>
+
+
+
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Email" name="email">
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" name="clave">
+            </div>
+
+
+
+            <input type="submit" value="Registrate" class="button" >
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿Ya tienes una cuenta?<a class="link" href="formulario">Iniciar Sesion</a></p>
+
+        </div>
+    </form>
+
+    </form>
+    <link rel="stylesheet" type="text/css" href='{% static "css/estilo_login.css" %}'/>
+
+
+
+
+
+
+{% endblock %}
+

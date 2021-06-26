@@ -1,0 +1,38 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+
+}
+
+.container{
+    margin-top: 5em;
+    width: 50%;
+    background-color: #a6d4d6;
+    padding: 2em;
+    height: 300px;
+    width: 500px;
+}
+.ordenar{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 20%;
+    margin: auto;
+}
+
+.fila{
+    display: flex;
+    flex-direction: row;
+
+
+}
+#uno{
+margin-right: 180px;
+
+}
+
+
+

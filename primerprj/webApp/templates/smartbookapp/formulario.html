@@ -1,0 +1,46 @@
+{% extends "smartbookapp/plantillaPadre.html" %}
+<title>Login</title>
+
+
+
+
+{% block contenido %}
+
+ {% load static %}
+
+            {% csrf_token %}
+        <form class="formulario" method="POST" name="loginForm" action="http://127.0.0.1:8000/login">
+            <a class="link"><img src='{% static "img/logo2.png"%}'/></a>
+
+
+                <h1>Login</h1>
+                 <div class="contenedor">
+                         <div class="input-contenedor">
+                             <i class="fas fa-envelope icon"></i>
+                             <input type="email" placeholder="correo" name="correo">
+                         </div>
+                         <div class="input-contenedor">
+                             <i class="fas fa-key icon"></i>
+                             <input type="password"  id="contrasena"  placeholder="Contraseña" name="clave"/>
+                         </div>
+                         <!--checkbox de mostrar contraseña-->
+                         <div style="margin-top:15px;">
+                              <input style="margin-left:5px;" type="checkbox" id="mostrar_contrasena" title="click para mostrar contraseña"/>
+                              &nbsp;&nbsp;Mostrar Contraseña
+                        </div>
+
+
+                        <button type="submit"class="button">Submit</button>
+                        <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                        <p>¿No tienes una cuenta? <a class="link" href="Registro">Registrate </a></p>
+                </div>
+        </form>
+
+       <link rel="stylesheet" type="text/css" href='{% static "css/estilo_login.css" %}'/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- JavaScript Bundle with Popper -->
+<script type="text/javascript" src='{% static "js/jquery-3.6.0.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/clave.js" %}'></script>
+{% endblock %}
+

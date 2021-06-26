@@ -1,0 +1,61 @@
+{% extends "smartbookapp/plantillaPadre.html" %}
+{% block titulo %}
+
+{% endblock%}
+
+{% block contenido %}
+{% load static %}
+
+<div class="contenedor">
+<form method="POST" class="post-form" action="usuario">
+    {% csrf_token %}
+
+
+    <h4>usuarios</h4>
+
+    <div class="uno">
+    <label>Nombre:</label>
+      {{ usuarioFrm.nombre }}
+
+    </div>
+
+    <div class="uno">
+    <label>Apellidos</label>
+    {{ usuarioFrm.apellidos }}
+    </div>
+
+    <div class="uno">
+    <label>Email:</label>
+
+    {{ usuarioFrm.email }}
+
+    </div>
+
+    <div class="uno">
+    <label>clave:</label>
+    {{ usuarioFrm.clave }}
+    </div>
+
+    <div class="uno">
+    <label >Estado:</label>
+
+    {{ usuarioFrm.estado}}
+
+    </div>
+    <div class="uno">
+    <label>Rol:</label>
+    {{ usuarioFrm.rol }}
+    </div>
+
+    <div style="position: center; margin-top:1em; margin-bottom: 2em;">
+  <button type="submit" class="btn btn-primary" style="width: 120px;position: center">Insertar</button>
+    </div>
+
+</form>
+    </div>
+
+        <link rel="stylesheet" type="text/css" href='{% static "css/form.css" %}'/>
+
+{% endblock %}
+</body>
+</html>

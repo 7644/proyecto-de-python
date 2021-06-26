@@ -1,0 +1,38 @@
+*{
+    padding: 0%;
+    margin: 0%;
+
+}
+
+.contenedor{
+
+    margin: auto;
+    height: 50%;
+    width: 600px;
+
+}
+form{
+    background-color: #3edbf0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    margin:auto;
+    width: 400px;
+    margin-top: 3em;
+    border:black solid;
+
+
+}
+.uno{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+
+
+}
