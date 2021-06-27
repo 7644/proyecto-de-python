@@ -1,6 +1,6 @@
 {% extends "smartbookapp/plantillaPadre.html" %}
 {% block titulo %}
-
+<title>Agregar</title>
 {% endblock%}
 
 {% block contenido %}
@@ -20,7 +20,7 @@
     </div>
 
     <div class="uno">
-    <label>Apellidos</label>
+    <label>Apellidos:</label>
     {{ usuarioFrm.apellidos }}
     </div>
 
@@ -57,5 +57,3 @@
         <link rel="stylesheet" type="text/css" href='{% static "css/form.css" %}'/>
 
 {% endblock %}
-</body>
-</html>

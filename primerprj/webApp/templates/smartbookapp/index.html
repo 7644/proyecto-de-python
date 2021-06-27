@@ -9,7 +9,7 @@
 {% csrf_token %} {% load static %}
 
 <header>
-{#    <!--<h4>Bienvenid@ {{ nombre }}</h4>-->#}
+
   <nav>
 
       <a href="#marcador1">inicio</a>
@@ -172,14 +172,14 @@
  <form id="formulario">
 
   <div class="form-group">
-    <label for="formGroupExampleInput">Nombre*</label>
+    <label for="formGroupExampleInput" class="uno">Nombre*</label>
 
     <input type="text" class="form-control"  placeholder="ingresa tu nombre">
 
-    <label for="exampleInputEmail1">Email*</label>
+    <label for="exampleInputEmail1" class="uno">Email*</label>
     <input type="email" class="form-control"  placeholder="Ingresa tu email">
 
-    <label for="exampleFormControlTextarea1">Inquietud*</label>
+    <label for="exampleFormControlTextarea1" class="uno">Inquietud*</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"placeholder="Ingresa tu inquietud"></textarea>
   </div>
   <button type="submit" id="boton"class="btn btn-primary">Enviar</button>
@@ -198,8 +198,6 @@
 
 </div>
    <link rel="stylesheet" type="text/css" href='{% static "css/estilos.css" %}'/>
-    <script type="text/javascript" src='{% static "js/index.js"%}'></script>
+
 {% endblock %}
 
-</body>
-</html>

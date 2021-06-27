@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<html>
-<head>
-    <title>Listar</title>
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+{% extends "smartbookapp/plantillaPadre.html" %}
 
+    {% block titulo %}
+        <title>Administrador</title>
+    {% endblock %}
 
-<body>
+{% block contenido %}
+
  {% load static %}{%csrf_token%}
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <h2 style="background-color: #3d3b3b; height: 2em; color: white;">Bienvenido {{ usuario }}</h2>
- <div style="text-align: right;">
-      <a href="logout" style="text-decoration: none; color: white">
- <button class="btn btn-warning"  name="cerrar_sesion">Cerrar sesión</button></a>
- </div>
+<header>
+ <h2>Bienvenido {{ usuario }}</h2>
+             <div>
+          <a href="logout">
+            <button class=" btn  " id="cerrar"  name="cerrar_sesion"><img src='{% static "img/logout.svg"%}' alt="">Salir</button>
+          </a>
+     </div>
+</header>
+
+
 
 
  <div class="container" style="margin-bottom: 1em; margin-top: 1.5em;">
@@ -40,7 +41,7 @@
 
 
 <table class="table">
-  <thead class="thead-dark">
+  <thead class="tabla">
     <tr>
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
@@ -80,19 +81,10 @@
 </table>
  <br>
  <br>
- <center><a href="usuario" class="btn btn-primary">agregar usuario</a></center>
+ <center><a href="usuario" id="agregar"class="btn btn-primary fas fa-user-plus">agregar usuario</a></center>
     <pre class="col-sm-4" id="prep"></pre>
 
-
-{#<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
-{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>#}
-    <script type="text/javascript" src='{% static "js/jquery-3.6.0.min.js" %}'></script>
-{#    <script type="text/javascript" src='{% static "js/index.js"%}'></script>#}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-</body>
-</html>
+ <link rel="stylesheet" type="text/css" href='{% static "css/admin.css" %}'/>
+{% endblock %}
 
 

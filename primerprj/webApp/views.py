@@ -20,26 +20,20 @@ from django.forms import modelform_factory
 
 # Create your views here.
 
-def PlantillaHija(request):
-    return render(request, "smartbookapp/PlantillaHija.html",{})
+
 
 
 def index(request):
-    context = {'msg1': 'valor mensaje1', 'msg2': 'valor del mensaje2'}
     return render(request,'smartbookapp/index.html')
 
 
-# return render(request, 'smartbookapp/formulario.html', context)
+
 
 
 def formulario(request):
-    #user = Usuarios.objects.filter(id=id).first()
-    #context = {'nombre': user.nombre}
     return render(request, 'smartbookapp/formulario.html')
 
 
-def despedida(request):
-    return HttpResponse('Despedida desde django')
 
 
 def login(request):
@@ -53,7 +47,6 @@ def login(request):
             rol = str(usu.rol)
             print(rol)
             if clave == usu.clave:
-                # mensaje = "usted se ha logueado como:" + usuario
                 if rol == 'usuario':
                     print('marisolllll')
                     request.session['sesion_usuario'] = str(usu.nombre)
@@ -63,7 +56,7 @@ def login(request):
 
                     request.session['sesion_usuario'] = str(usu.nombre)
 
-                    #print (request.session.get['sesion_usuario'])
+
                     id = str(usu.id)
                     print(rol)
                     return HttpResponseRedirect('administrador_listar/'+id)
@@ -105,11 +98,11 @@ def administrador_listar(request, id):
 
 
 def barraBusqueda(request):
-    verificarSession()
     admin=request.session.get('sesion_usuario')
     if request.method=='POST':
         busqueda = request.POST.get('buscar')
         if(busqueda!=""):
+            verificarSession
             usu = Usuarios.objects.filter(nombre=busqueda)
             usu = [usuario_serializer(usuario) for usuario in usu]
             print(usu)
